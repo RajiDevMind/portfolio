@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 80vw;
+  margin: 10px auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+body {
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  background: #d7dfec;
+  align-items: center;
+}
+
+.nav a {
+  padding: 5px 8px;
+  text-decoration: none;
+  letter-spacing: 0.01rem;
+  color: inherit;
+}
+.objectives p {
+  font-weight: 200;
+  font-family: kanit;
+}
+.headerimg {
+  border-radius: 10px;
+  object-fit: cover;
+  min-width: 450px;
+  display: flex;
+}
+.headerimg .wrapper {
+  display: flex;
+  width: 450px;
+  height: 450px;
+  padding: 0 10px;
+  object-fit: cover;
+}
+.headerimg .wrapper img {
+  border-radius: 10px;
+}
+.skills h1 {
+  font-size: 22px;
+}
+.stack {
+  padding: 10px;
+  border-radius: 9px;
+}
+.stack:hover {
+  background-color: #d7dfec;
+  transition: 3s ease-in-out;
+}
+.footers {
+  display: flex;
+}
