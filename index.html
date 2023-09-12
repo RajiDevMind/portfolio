@@ -3,35 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit:ital@1&family=Montserrat:ital,wght@0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Montserrat:ital,wght@0,600;1,700&display=swap"
-      rel="stylesheet"
-    />
     <title>Raji Portfolio</title>
   </head>
   <body>
     <div class="navbar">
       <div class="logo">
-        <h1>logo</h1>
+        <h1>RAJI</h1>
       </div>
       <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#footers">About</a>
         <a href="#skills">Skills</a>
+      </div>
+      <div>
+        <input type="checkbox" id="toggle" class="inputcheckbox" />
+        <label for="toggle" class="inputlabel">
+          <div class="circle"></div>
+        </label>
       </div>
     </div>
     <div class="welcome">
       <h2 class="notes"></h2>
+      <h2 class="notes"></h2>
+      <h2 class="notes"></h2>
     </div>
+
     <div class="objectives">
       <p>
         According to Carmine Gallo, author of “Talk like Ted”, he wrote, “Ideas
@@ -102,18 +105,41 @@
       </div>
     </div>
     <hr />
-    <footer class="footers">
+    <form>
+      <div class="newsletter">
+        <p>
+          <span>Subscribe</span> to my newsletter to receive content and latest
+          articles in tech industry
+        </p>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          class="email"
+          placeholder="Enter Your Email"
+        />
+        <button onclick="resp()" name="" id="submitBtn">Submit</button>
+      </div>
+    </form>
+    <hr />
+    <footer id="footers" class="footers">
       <div>
-        <div class="email">email</div>
+        <div class="email">
+          <a target="_blank" href="mailto:omoiyaalasso@gmail.com">Email</a>
+        </div>
       </div>
       <div>
-        <div class="email">github</div>
+        <a target="_blank" href="https://github.com/RajiDevMind">Github</a>
       </div>
       <div>
-        <div class="email">linkedIn</div>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/raji-opeyemi-i-219b93238"
+          >LinkedIn</a
+        >
       </div>
       <div>
-        <div class="email">Whatsapp</div>
+        <a target="_blank" href="https://wa.link/oowia5">Whatsapp</a>
       </div>
     </footer>
 

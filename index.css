@@ -13,10 +13,22 @@ html {
 body {
   align-items: center;
 }
+.logo {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 50%;
+  font-family: "Dancing Script", cursive;
+}
 .navbar {
   display: flex;
   background: #d7dfec;
   align-items: center;
+  margin-bottom: 40px;
+  border-bottom-right-radius: 20px 20px;
+  border-bottom-left-radius: 20px 20px;
+
+  position: sticky;
+  /* top: 0; */
 }
 
 .nav a {
@@ -25,6 +37,60 @@ body {
   letter-spacing: 0.01rem;
   color: inherit;
 }
+
+/* dark mode toggle */
+.inputcheckbox {
+  visibility: hidden;
+}
+.inputlabel {
+  width: 35px;
+  height: 17px;
+  background-color: lightgray;
+  border-radius: 20px;
+  margin-right: 7px;
+  cursor: pointer;
+
+  position: absolute;
+  left: 85%;
+  top: 16px;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  background-color: gray;
+  border-radius: 50%;
+
+  position: absolute;
+  top: -8.3px;
+  left: 2px;
+  animation: toggleOff 0.4s linear forwards;
+}
+.inputcheckbox:checked + .inputlabel {
+  background-color: white;
+  /* position: absolute; */
+}
+.inputcheckbox:checked + .inputlabel .circle {
+  animation: toggleOn 0.4s linear forwards;
+  background-color: black;
+}
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes toggleOff {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} /*  dark mode end */
+
 .objectives p {
   font-weight: 200;
   font-family: kanit;
@@ -54,8 +120,29 @@ body {
 }
 .stack:hover {
   background-color: #d7dfec;
-  transition: 3s ease-in-out;
+  transition: 3s all ease-in-out;
 }
-.footers {
+.newsletter .email {
+  /* display: flex; */
+  padding: 10px;
+  width: 80%;
+  font-family: kanit;
+  font-weight: 100;
+  border-radius: 5px;
+}
+.newsletter .email:focus {
+  border: none;
+}
+span {
+  color: red;
+}
+.footers a {
   display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+.footers a:hover {
+  color: gray;
+  transition: 2s ease;
 }
