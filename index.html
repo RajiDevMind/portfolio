@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit:ital@1&family=Montserrat:ital,wght@0,600;1,700&display=swap"
       rel="stylesheet"
@@ -17,7 +23,7 @@
       <div class="logo">
         <h1>RAJI</h1>
       </div>
-      <div class="nav">
+      <div class="nav" id="#btn">
         <a href="#">Blog</a>
         <a href="#footers">About</a>
         <a href="#skills">Skills</a>
@@ -30,11 +36,18 @@
       </div>
     </div>
     <div class="welcome">
-      <h2 class="notes"></h2>
-      <h2 class="notes"></h2>
-      <h2 class="notes"></h2>
+      <h2 class="note">Welcome! My name is Raji</h2>
+      <h1 class="notes"></h1>
     </div>
-
+    <div class="cv">
+      <a
+        href="/images/CV.pdf"
+        class="material-symbols-outlined"
+        target="_blank"
+        alt="Curriculum Vitae"
+        >open_in_newcv</a
+      >
+    </div>
     <div class="objectives">
       <p>
         According to Carmine Gallo, author of “Talk like Ted”, he wrote, “Ideas
@@ -49,18 +62,20 @@
     </div>
     <div class="headerimg">
       <div class="wrapper">
-        <img class="img1" src="/images/img1.jpg" alt="mypic" />
-      </div>
-      <div class="wrapper">
-        <img class="img3" src="/images/img3.jpg" alt="mypic" />
-      </div>
-      <div class="wrapper">
-        <img class="img2" src="/images/img2.jpg" alt="mypic" />
-      </div>
-      <div class="wrapper">
-        <img class="img4" src="/images/img3.jpg" alt="mypic" />
+        <img class="allimg img1" src="/images/img1.jpg" alt="mypic" />
+
+        <img class="allimg img3" src="/images/img3.jpg" alt="mypic" />
+
+        <img class="allimg img2" src="/images/img2.jpg" alt="mypic" />
+
+        <img class="allimg img4" src="/images/img3.jpg" alt="mypic" />
+
+        <img class="allimg img1" src="/images/img1.jpg" alt="mypic" />
+
+        <img class="allimg img3" src="/images/img3.jpg" alt="mypic" />
       </div>
     </div>
+
     <hr />
     <div id="skills" class="skills">
       <h1>Skills And Technologies</h1>
@@ -105,28 +120,43 @@
       </div>
     </div>
     <hr />
-    <form>
-      <div class="newsletter">
-        <p>
-          <span>Subscribe</span> to my newsletter to receive content and latest
-          articles in tech industry
-        </p>
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          class="email"
-          placeholder="Enter Your Email"
-        />
-        <button onclick="resp()" name="" id="submitBtn">Submit</button>
-      </div>
+    <div class="newsletter">
+      <p>
+        <span>Subscribe</span> to my newsletter to receive content and latest
+        articles in tech industry
+      </p>
+    </div>
+
+    <form id="myForm">
+      <input
+        type="email"
+        name="email"
+        class="email usermail stack"
+        placeholder="Enter Your Email"
+      />
+
+      <button
+        type="submit"
+        class="btn"
+        id="displayPopup"
+        onclick="displayPopup()"
+      >
+        Subscribe
+      </button>
     </form>
+
+    <div class="thankyoucontainer">
+      <div class="popup" id="popup">
+        <span class="material-symbols-outlined"> verified </span>
+        <h3>Thank You!</h3>
+        <p>You have Subscribed Successfully</p>
+        <button type="button" id="hidepopup" onclick="hidePopup()">OK</button>
+      </div>
+    </div>
     <hr />
     <footer id="footers" class="footers">
-      <div>
-        <div class="email">
-          <a target="_blank" href="mailto:omoiyaalasso@gmail.com">Email</a>
-        </div>
+      <div class="email">
+        <a target="_blank" href="mailto:omoiyaalasso@gmail.com">Email</a>
       </div>
       <div>
         <a target="_blank" href="https://github.com/RajiDevMind">Github</a>
@@ -142,6 +172,7 @@
         <a target="_blank" href="https://wa.link/oowia5">Whatsapp</a>
       </div>
     </footer>
+    <p style="text-align: center; font-size: 8px">&#169;RajiDevMind(2023)</p>
 
     <script type="module" src="index.js"></script>
   </body>
