@@ -4,12 +4,18 @@ const emailRouter = require("./routes/mail");
 
 // middleware
 app.use(express.json());
+// middleware: For Frontend Source Code
+app.use(express.static("../public"));
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello world!!!</h1>");
+// app.get("/", (req, res) => {
+//   res.send("<h1>Hello world!!!</h1>");
+// });
+
+app.use("/subscribe", emailRouter);
+
+app.get("*", (req, res) => {
+  res.send("<h1>Hey There, Page not Found!!!</h1>");
 });
-
-app.use("/", emailRouter);
 
 const port = 4500;
 
