@@ -55,17 +55,19 @@ function updateLocalStorage() {
 // dark mode func ends here
 
 // Dialog box popup
-// let popup = document.querySelector("#popup");
-// let displayEl = document.querySelector("#displayPopup");
-// let hideEl = document.querySelector("#hidePopup");
-// let time = 4000;
-// const displayPopup = () => {
-//   popup.classList.add("display");
-// };
-// setTimeout(time, displayPopup());
-// setTimeout(() => {
-//   let users = confirm("Thanks");
-// }, 3000);
+let popup = document.querySelector("#popup");
+
+let time = 4000;
+const displayPopups = () => {
+  popup.classList.add("display");
+};
+
+const hidePopup = () => {
+  popup.classList.remove("display");
+};
+
+popup.addEventListener("click", displayPopups);
+// setTimeout(displayPopups, time);
 
 const formEl = document.getElementById("myForm");
 const danger = document.querySelector(".danger");
@@ -97,3 +99,24 @@ formEl.addEventListener("submit", async function (e) {
   }
   e.currentTarget.reset();
 });
+
+// let popup = document.getElementById("popup");
+// let usermail = document.querySelector(".usermail");
+// console.log(usermail.value);
+
+// usermail.addEventListener("input", function displayPopup(e) {
+//   e.preventDefault();
+//   const emailValue = usermail.value;
+//   console.log("Input value changed to:", emailValue);
+
+//   popup.addEventListener("click", function displayed() {
+//     console.log(emailValue);
+//   });
+
+// if (usermail) {
+//   popup.classList.add("display");
+// } else {
+//   console.log("error whiile displaying!!!");
+//   hidePopup();
+// }
+// });

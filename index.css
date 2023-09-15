@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit:ital@1&family=Montserrat:ital,wght@0,600;1,700&family=Poppins:wght@300;500&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 80vw;
+  margin: 10px auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(14px + (23 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
 .notes {
   font-family: "poppins", sans-serif;
   letter-spacing: 1px;
@@ -36,19 +48,9 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-  max-width: 80vw;
-  margin: 10px auto;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: calc(14px + (23 - 12) * ((100vw - 320px) / (1920 - 320)));
-}
-
+/* body {
+  background-color: #c9c9c9;
+} */
 .logo {
   border: 1px solid black;
   padding: 5px;
@@ -99,7 +101,7 @@ html {
 
   position: absolute;
   top: -8.3px;
-  left: 2px;
+  left: 3px;
   animation: toggleOff 0.4s linear forwards;
 }
 
@@ -175,6 +177,7 @@ span {
 .footers {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  margin-left: 0;
 }
 .footers a {
   text-decoration: none;
@@ -197,7 +200,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3c5077;
+  background-color: #75a4ef;
 }
 
 .btn {
@@ -221,9 +224,9 @@ span {
   border-radius: 6px;
 
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
+  bottom: -10%;
+  left: 30%;
+  transform: translate(50%, 50%) scale(0.1);
   text-align: center;
   padding: 0 30px 30px;
   color: #333;
@@ -232,9 +235,9 @@ span {
 }
 
 .display {
-  /* visibility: visible; */
-  display: block;
-  bottom: 50%;
+  visibility: visible;
+  bottom: -10%;
+  left: -30%;
   transform: translate(50%, 50%) scale(1);
 }
 
@@ -244,7 +247,7 @@ span {
   margin: 30px 0 10px;
 }
 
-/* .popup button {
+.popup button {
   width: 100%;
   margin-top: 25px;
   padding: 10px 0;
@@ -256,4 +259,4 @@ span {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-} */
+}
