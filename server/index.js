@@ -11,7 +11,7 @@ app.use(express.static("../public"));
 //   res.send("<h1>Hello world!!!</h1>");
 // });
 
-app.use("/subscribe", emailRouter);
+app.use("/", emailRouter);
 
 app.get("*", (req, res) => {
   res.send("<h1>Hey There, Page not Found!!!</h1>");

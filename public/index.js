@@ -70,7 +70,7 @@ popup.addEventListener("click", displayPopups);
 // setTimeout(displayPopups, time);
 
 const formEl = document.getElementById("myForm");
-const danger = document.querySelector(".danger");
+const emailInputs = document.querySelector(".email");
 
 formEl.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -84,14 +84,15 @@ formEl.addEventListener("submit", async function (e) {
     console.log("Kindly provide valid details!");
     return;
   }
-  const email = formData.get("email");
+  const emailInput = formData.get("email");
 
   const response = await fetch("http://localhost:4500/subscribe", {
     method: "POST",
-    body: JSON.stringify(email),
     headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: emailInput }),
     credentials: "include",
   });
+
   if (response.status === 200) {
     alert("Subscribed Successfully!");
   } else {
