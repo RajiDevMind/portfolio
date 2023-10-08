@@ -54,13 +54,16 @@ function updateLocalStorage() {
 }
 // dark mode func ends here
 
-// email form submission start here
+// email form submission start here with dialog box
 const formEl = document.getElementById("myForm");
 const emailInputs = document.querySelector(".email");
 
+// const btn = document.querySelector(".btn");
+const thanks = document.querySelector(".thankyoucontainer");
+const hidepopup = document.querySelector(".hidepopup");
+
 formEl.addEventListener("submit", async function (e) {
   e.preventDefault();
-
   const formData = new FormData(formEl);
 
   const checkEmptyValues = [...formData.values()];
@@ -80,22 +83,14 @@ formEl.addEventListener("submit", async function (e) {
   });
 
   if (response.status === 200) {
-    alert("Subscribed Successfully!");
+    thanks.classList.add("display");
   } else {
     console.log("Failed to Subscribe, Try again!");
   }
   e.currentTarget.reset("");
 });
 
-// Dialog box popup
-const btn = document.querySelector(".btn");
-const thanks = document.querySelector(".thankyoucontainer");
-const hidepopup = document.querySelector(".hidepopup");
-
-btn.addEventListener("click", function () {
-  thanks.classList.add("display");
-});
+// Dialog box popup to remove
 hidepopup.addEventListener("click", function () {
   thanks.classList.remove("display");
 });
-// dialog box ends here
