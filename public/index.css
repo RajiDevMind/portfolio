@@ -48,9 +48,13 @@ html {
   margin: 0;
 }
 
-/* body {
-  background-color: #c9c9c9;
-} */
+.container-obj {
+  display: flex;
+}
+.img-obj img {
+  width: 300px;
+  border-radius: 50px;
+}
 
 .logo {
   border: 1px solid black;
@@ -139,6 +143,8 @@ hr {
 .objectives p {
   font-weight: 200;
   font-family: kanit;
+  max-width: 400px;
+  padding: 20px 20px 20px 0;
 }
 .wrapper {
   background-color: gray;
@@ -240,7 +246,7 @@ span {
   background: rgba(73, 166, 233, 0.5);
   display: grid;
   place-items: center;
-  /* transition: var(--transition); */
+  transition: 2s ease;
   visibility: hidden;
   z-index: -10;
 }
@@ -259,7 +265,6 @@ span {
 }
 
 .popup h3 {
-  /* font-size: 35px; */
   font-weight: 500;
   margin: 30px 0 10px;
 }
@@ -286,5 +291,11 @@ span {
 @media (max-width: 800px) {
   .cover {
     display: block;
+  }
+  .objectives p {
+    padding: 0;
+  }
+  .img-obj img {
+    display: none;
   }
 }
