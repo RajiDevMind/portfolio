@@ -54,21 +54,7 @@ function updateLocalStorage() {
 }
 // dark mode func ends here
 
-// Dialog box popup
-let popup = document.querySelector("#popup");
-
-let time = 4000;
-const displayPopups = () => {
-  popup.classList.add("display");
-};
-
-const hidePopup = () => {
-  popup.classList.remove("display");
-};
-
-popup.addEventListener("click", displayPopups);
-// setTimeout(displayPopups, time);
-
+// email form submission start here
 const formEl = document.getElementById("myForm");
 const emailInputs = document.querySelector(".email");
 
@@ -98,26 +84,18 @@ formEl.addEventListener("submit", async function (e) {
   } else {
     console.log("Failed to Subscribe, Try again!");
   }
-  e.currentTarget.reset();
+  e.currentTarget.reset("");
 });
 
-// let popup = document.getElementById("popup");
-// let usermail = document.querySelector(".usermail");
-// console.log(usermail.value);
+// Dialog box popup
+const btn = document.querySelector(".btn");
+const thanks = document.querySelector(".thankyoucontainer");
+const hidepopup = document.querySelector(".hidepopup");
 
-// usermail.addEventListener("input", function displayPopup(e) {
-//   e.preventDefault();
-//   const emailValue = usermail.value;
-//   console.log("Input value changed to:", emailValue);
-
-//   popup.addEventListener("click", function displayed() {
-//     console.log(emailValue);
-//   });
-
-// if (usermail) {
-//   popup.classList.add("display");
-// } else {
-//   console.log("error whiile displaying!!!");
-//   hidePopup();
-// }
-// });
+btn.addEventListener("click", function () {
+  thanks.classList.add("display");
+});
+hidepopup.addEventListener("click", function () {
+  thanks.classList.remove("display");
+});
+// dialog box ends here

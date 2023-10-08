@@ -78,45 +78,53 @@
 
     <hr />
     <div id="skills" class="skills">
-      <h1>Skills And Technologies</h1>
-      <div id="FE" class="frontend stack">
-        <ul>
-          Frontend
-        </ul>
-        <li>HTML5, CSS3, TAILWIND CSS</li>
-        <li>REACTJS</li>
-        <li>RESPONSIVE WEB DESIGN</li>
+      <h2>Skills And Technologies</h2>
+      <div class="cover">
+        <div id="FE" class="frontend stack">
+          <ul>
+            Frontend
+          </ul>
+          <li>HTML5, CSS3, JavaScript</li>
+          <li>ReactJs</li>
+          <li>Responsive Web Design</li>
+          <li>Cross-browser and device testing</li>
+          <li>Web performance optimization (WPO)</li>
+        </div>
+        <hr />
+        <div id="BE" class="backend stack">
+          <ul>
+            Backend
+          </ul>
+          <li>Node.JS</li>
+          <li>Express.JS</li>
+          <li>Restful API Development</li>
+          <li>Authentication and Authorisation (JWT)</li>
+          <li>CRUD Operations</li>
+          <li>Error-Handling</li>
+        </div>
       </div>
       <hr />
-      <div id="BE" class="backend stack">
-        <ul>
-          Backend
-        </ul>
-        <li>Node.JS</li>
-        <li>Express.JS</li>
-        <li>Restful API Development</li>
-        <li>Authentication and Authorisation (JWT)</li>
-        <li>CRUD Operations</li>
-        <li>Error-Handling</li>
-      </div>
-      <hr />
-      <div id="DB" class="database stack">
-        <ul>
-          Database
-        </ul>
-        <li>MongoDB</li>
-        <li>Mongoose (ODM)</li>
-      </div>
-      <hr />
-      <div id="TOOLS" class="tools stack">
-        <ul>
-          Tools
-        </ul>
-        <li>Postman</li>
-        <li>Visual Studio Code</li>
-        <li>Basic Command Line Usage</li>
-        <li>Strong Problem-Solving Skills</li>
-        <li>Excellent Communication Skills</li>
+      <div class="cover">
+        <div id="DB" class="database stack">
+          <ul>
+            Database
+          </ul>
+          <li>MongoDB</li>
+          <li>Mongoose (ODM)</li>
+          <li>Optimize and maintain legacy systems</li>
+          <li>Solve database usage issues and malfunctions</li>
+        </div>
+        <hr />
+        <div id="TOOLS" class="tools stack">
+          <ul>
+            Tools
+          </ul>
+          <li>Postman</li>
+          <li>Visual Studio Code</li>
+          <li>Basic Command Line Usage</li>
+          <li>Strong Problem-Solving Skills</li>
+          <li>Excellent Communication Skills</li>
+        </div>
       </div>
     </div>
     <hr />
@@ -135,14 +143,7 @@
         placeholder="Enter Your Email"
       />
 
-      <button
-        type="submit"
-        class="btn"
-        id="displayPopup"
-        onclick="displayPopups()"
-      >
-        Subscribe
-      </button>
+      <button type="submit" class="btn">Subscribe</button>
     </form>
 
     <div class="thankyoucontainer">
@@ -150,7 +151,7 @@
         <span class="material-symbols-outlined"> verified </span>
         <h3>Thank You!</h3>
         <p>You have Subscribed Successfully</p>
-        <button type="button" id="hidepopup" onclick="hidePopup()">OK</button>
+        <button type="button" class="hidepopup">OK</button>
       </div>
     </div>
     <hr />
