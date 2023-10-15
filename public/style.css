@@ -54,6 +54,7 @@ html {
 .img-obj img {
   width: 300px;
   border-radius: 50px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.9);
 }
 
 .logo {
@@ -224,7 +225,7 @@ span {
 }
 
 .btn {
-  padding: 8px 20px;
+  padding: 15px 20px;
   border: 0;
   cursor: pointer;
   font-weight: 400;
@@ -297,5 +298,14 @@ span {
   }
   .img-obj img {
     display: none;
+  }
+  #myForm {
+    margin-left: 0px;
+  }
+  .btn {
+    width: 100%;
+  }
+  .email {
+    width: 100%;
   }
 }
